@@ -1,0 +1,60 @@
+﻿<Page x:Class="KhlybovExam.Pages.AdmStartPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KhlybovExam.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AdmStartPage">
+
+    <Grid>
+        <Button
+            Content="Назад"
+            x:Name="BackBtn"
+            Click="BackBtn_Click"
+            Background="Coral"
+            HorizontalAlignment="Left"
+            Margin="28,15,0,0"
+            VerticalAlignment="Top"
+            Width="47" />
+        <Button
+            Content="Создать заявку на продажу"
+            x:Name="SellPhoneBtn"
+            Click="SellPhoneBtn_Click"
+            Background="Coral"
+            HorizontalAlignment="Left"
+            Margin="458,13,0,0"
+            VerticalAlignment="Top"
+            Width="196"
+            Height="22" />
+        <Button
+            Content="Добавить клиента"
+            x:Name="AddClient"
+            Click="AddClient_Click"
+            Background="Coral"
+            HorizontalAlignment="Left"
+            Margin="201,14,0,0"
+            VerticalAlignment="Top"
+            Width="123" />
+        <DataGrid
+            Margin="80"
+            x:Name="PhoneListDG"
+            AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Width="*"
+                    Header="Тип телефона"
+                    Binding="{Binding TypePhone.Name}" />
+                <DataGridTextColumn
+                    Width="*"
+                    Header="Имя телефона"
+                    Binding="{Binding Name}" />
+                <DataGridTextColumn
+                    Width="*"
+                    Header="Цена телефона"
+                    Binding="{Binding Price}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>
